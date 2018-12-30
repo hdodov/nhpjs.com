@@ -1,0 +1,21 @@
+#cta {
+    h3 {
+        max-width: 22em;
+        margin: 40px auto;
+    }    
+
+    @include media-larger('xs') {
+        font-size: 20px;
+        text-align: center;
+
+        button {
+            min-width: 10em;
+        }
+    }
+
+    @include media-smaller('sm') {
+        button {
+            width: 100%;
+        }
+    }
+}

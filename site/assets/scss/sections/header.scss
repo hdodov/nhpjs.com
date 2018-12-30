@@ -1,0 +1,48 @@
+.header-full {
+    background: $color-bg-1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        transition: opacity 0.1s ease;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        img {
+            display: block;
+            width: 50px;
+        }
+    }
+
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+            li {
+                display: inline-block;
+
+                &:last-child a {
+                    padding-right: 0;
+                }
+            }
+
+                a {
+                    display: inline-block;
+                    padding: 18px 12px;
+                    color: $color-white;
+
+                    &:hover {
+                        color: $color-white-dark;
+                    }
+                }
+    } // .nav
+}

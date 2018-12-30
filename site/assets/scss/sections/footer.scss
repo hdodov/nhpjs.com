@@ -1,0 +1,21 @@
+footer {
+    padding: 20px 0;
+    background: $color-bg-1;
+    text-align: center;
+    color: $color-white;
+
+    a {
+        text-decoration: underline;
+        color: $color-white;
+
+        &:hover {
+            color: $color-white-dark;
+        }
+    }
+
+    .icon {
+        width: 1em;
+        height: 1em;
+        fill: $color-white;
+    }
+}

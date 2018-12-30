@@ -5,7 +5,7 @@ var content = require('@/modules/content');
     <div class="wrap">
         <h2>Features</h2>
 
-        <div class="features">
+        <div class="items">
             content.features.forEach((feature) => {
                 <div>
                     echo(icon(feature.icon));
@@ -18,8 +18,8 @@ var content = require('@/modules/content');
             });
         </div>
 
-        <p class="info">\
-            By the way, these icons are inline SVGs imported from the
+        <p class="info" style="max-width: 40em;">\
+            By the way, the icons above are inline SVGs imported from the
             <a href="https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core" target="_blank">fontawesome-svg-core</a> module.
             Putting them on this page was as simple as
             <code>echo(icon('faCode'))</code>

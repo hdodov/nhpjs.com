@@ -1,7 +1,7 @@
 var icon = require('@/modules/icon');
 var content = require('@/modules/content');
 
-<section class="section-wrap section-bg section-cta">
+<section id="cta" class="section-wrap section-bg">
     <div class="wrap sm">
         <echo>
             <h2>Get started?</h2>

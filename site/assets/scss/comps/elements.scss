@@ -1,0 +1,61 @@
+body {
+    font-size: 16px;
+    font-family: $font-family-1;
+    line-height: 1.5;
+    color: #2a2638;
+
+    @include media-smaller('sm') {
+        font-size: 18px;
+    }
+}
+
+a {
+    color: $color-accent-1;
+    text-decoration: none;
+
+    &:hover {
+        color: lighten($color-accent-1, 20);
+    }
+}
+
+a button {
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 60px;
+    font-size: 36px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+button {
+    padding: 16px 48px 20px;
+    border: none;
+    outline: none;
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+
+    -webkit-appearance: none;
+    background: $color-accent-1;
+    border-radius: 60px;
+    transition: background 0.1s ease;
+
+    &:hover {
+        background: darken($color-accent-1, 5);
+    }
+
+    .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-left: 10px;
+        fill: #fff;
+        vertical-align: bottom;
+    }
+}

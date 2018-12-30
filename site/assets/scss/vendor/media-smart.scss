@@ -1,0 +1,109 @@
+// ----
+// Sass (v3.4.21)
+// Compass (v1.0.3)
+// ----
+
+$screens: (
+    "xs": 0px,
+    "sm": 768px,
+    "md": 992px,
+    "lg": 1200px
+) !default;
+
+@function ms_search_screens($search) {
+    $keys: map-keys($screens);
+    $keysCount: length($keys);
+    $prev: null;
+    $curr: null;
+    $next: null;
+
+    @for $i from 1 through $keysCount {
+        @if (nth($keys, $i) == $search) {
+            $curr: $search;
+
+            @if ($i < $keysCount) {
+                $next: nth($keys, $i + 1);
+            }
+
+            @if ($i > 1) {
+                $prev: nth($keys, $i - 1);
+            }
+        }    
+    }
+
+    @return (
+        "previous": $prev,
+        "current":  $curr,
+        "next":     $next
+    );
+}
+
+@function ms_get_screen($search, $position: "current") {
+    $result: ms_search_screens($search);
+    @return map-get($result, $position);
+}
+
+@function ms_get_screen_size($search, $position: "current") {
+    @return map-get($screens, ms_get_screen($search, $position));
+}
+
+@mixin media-smaller($screen) {
+    $size: ms_get_screen_size($screen);
+
+    @if ($size) {
+        @if ($size > 2) {
+            @media (max-width: $size - 1) {
+                @content;
+            }
+        } @else  {
+            @warn "can't have @media smaller than `#{$size}`";
+        }
+    } @else {
+        @warn "media type not found: #{$screen}";
+    }
+}
+
+@mixin media-only($screen) {
+    $previous: ms_get_screen($screen, "previous");
+    $current: ms_get_screen($screen, "current");
+    $next: ms_get_screen($screen, "next");
+
+    $currentSize: ms_get_screen_size($current);
+    $nextSize: ms_get_screen_size($next);
+
+    @if ($current) {
+        @if ($next) {
+            @if ($currentSize <= 0) {
+                @include media-smaller($next) {
+                    @content;
+                };
+            } @else {
+                @media (min-width: $currentSize) and (max-width: $nextSize - 1) {
+                    @content;
+                }
+            }
+        } @else if ($previous) {
+            @include media-larger($previous) {
+                @content;
+            }
+        }
+    } @else {
+        @warn "media type not found: #{$screen}";
+    }
+}
+
+@mixin media-larger($screen) {
+    @if (ms_get_screen($screen)) {
+        $nextSize: ms_get_screen_size($screen, "next");
+
+        @if ($nextSize) {
+            @media (min-width: $nextSize) {
+                @content;
+            }
+        } @else {
+            @warn "no breakpoint after `#{$screen}`"
+        }  
+    } @else {
+        @warn "media type not found: #{$screen}";
+    }
+}

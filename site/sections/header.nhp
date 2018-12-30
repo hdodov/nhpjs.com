@@ -2,12 +2,15 @@ var content = require('@/modules/content');
 
 <div class="header-full">
     <header class="wrap">
-        <img src="/assets/img/logo.svg" class="logo">
+        <a href="/index.nhp" class="logo">
+            <img src="/assets/img/logo.svg">
+        </a>
+    
         <nav>
             <ul>
                 <echo strip>
-                    <li><a href="index.nhp">Home</a></li>
-                    <li><a href="demo.nhp">Demos</a></li>
+                    <li><a href="/index.nhp">Home</a></li>
+                    <li><a href="/demo.nhp">Demos</a></li>
                     <li><a href="${ content.links.repo }" target="_blank">GitHub</a></li>
                 </echo>
             </ul>

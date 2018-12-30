@@ -1,0 +1,25 @@
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+
+    &.sm {
+        max-width: 600px;
+    }
+
+    @include media-smaller('sm') {
+        padding: 0 20px;
+    }
+}
+
+.section-wrap {
+    .wrap {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+}
+
+.section-bg {
+    padding-top: 0.1px;
+    padding-bottom: 0.1px;
+    background: $color-bg-2;
+}

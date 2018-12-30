@@ -335,7 +335,7 @@ button {
   outline: none;
   font-size: 28px;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
   -webkit-appearance: none;
   background: #3d19c5;
   border-radius: 60px;
@@ -347,8 +347,8 @@ button {
     width: 1em;
     height: 1em;
     margin-left: 10px;
-    fill: #fff;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    fill: #ffffff; }
 
 .wrap {
   max-width: 960px;
@@ -503,12 +503,9 @@ header {
   margin: 60px auto;
   font-size: 14px;
   text-align: center;
-  color: #888; }
+  color: #888888; }
   #features .info code {
-    background: #eee;
-    border-radius: 2px;
-    padding: 2px 8px 3px;
-    color: #333; }
+    color: #2a2638; }
 
 #features .cta {
   margin: 100px 0;

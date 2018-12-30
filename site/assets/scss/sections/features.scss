@@ -54,13 +54,10 @@
 
         font-size: 14px;
         text-align: center;
-        color: #888;
+        color: $color-text-light;
 
         code {
-            background: #eee;
-            border-radius: 2px;
-            padding: 2px 8px 3px;
-            color: #333;
+            color: $color-text-1;
         }
     }
 

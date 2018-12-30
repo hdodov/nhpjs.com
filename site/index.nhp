@@ -1,0 +1,85 @@
+var icon = require('@/modules/icon');
+var content = require('@/modules/content');
+
+<!DOCTYPE html>
+<html>
+
+await include('./snippets/head.nhp');
+
+var code = capture(() => {
+    <echo trim>
+<span class="em1">if</span> (<span class="em2">check</span>()) {
+    &lt;<span class="em1">h1</span>&gt;This is NHP!&lt;/<span class="em1">h1</span>&gt;
+}
+    </echo>
+});
+
+<body>
+    await include('./sections/header.nhp');
+
+    <section class="intro">
+        <div class="wrap">
+            <h1 class="intro-title">What is NHP?</h1>
+        </div>
+
+        <div class="code-full">
+            <div class="wrap">
+                <pre><code>${ code }</code></pre>
+
+                <echo plain>
+                    <p class="intro-description">
+                        <strong>N</strong>ode
+                        <strong>H</strong>ypertext
+                        <strong>P</strong>reprocessor
+                        is a templating engine built on <a href="https://nodejs.org/" target="_blank">Node.js</a> that employs the modular paradigm.
+                        It has no control-flow tags and among basic features, it has asynchronous rendering and allows you to
+                        utilize <strong>the entirety of the <a href="https://www.npmjs.com/" target="_blank">npm</a> registry</strong>
+                        to render your markup!
+                    </p>
+                </echo>
+            </div>
+        </div>  
+    </section>
+
+    <section id="features" class="section-wrap">
+        <div class="wrap">
+            <h2>Features</h2>
+
+            <div class="features">
+                content.features.forEach((feature) => {
+                    <div>
+                        echo(icon(feature.icon));
+
+                        <div class="content">
+                            <h3>${ feature.title }</h3>
+                            <p>${ feature.text }</p>
+                        </div>
+                    </div>
+                });
+            </div>
+
+            <p class="info">By the way, these icons are inline SVGs imported from the <a href="https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core">fontawesome-svg-core</a> module. Putting them on this page was as simple as <code>echo(icon('faCode'))</code></p>
+
+            <h3 class="cta">Check out <a href="demo.nhp">the demos</a>!</h3>
+        </div>
+    </section>
+
+    <section class="section-wrap section-bg section-cta">
+        <div class="wrap sm">
+            <echo>
+                <h2>Get started?</h2>
+                <p>This is experimental technology and although it's not yet recommended for usage in production, this very website was built with it and it was a blast! You could check the source code <a href="#">here</a>.</p>
+
+                <h3>If you're feeling hyped, go to GitHub and you'll be writing NHP templates in no time!</h3>
+
+                <a href="#">
+                    <button>GitHub ${ icon('faArrowRight') }</button>
+                </a>
+            </echo>
+        </div>
+    </section>
+
+    await include('./sections/footer.nhp');
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+var ms = require('ms');
+var data = require('./modules/data.json');
+
+<h1>${ ms(Math.random() * 10e4) }</h1>
+<pre>${ data.text }</pre>

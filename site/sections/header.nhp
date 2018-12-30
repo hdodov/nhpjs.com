@@ -1,0 +1,14 @@
+<div class="header-full">
+    <header class="wrap">
+        <img src="/assets/img/logo.svg" class="logo">
+        <nav>
+            <ul>
+                <echo strip>
+                    <li><a href="index.nhp">Home</a></li>
+                    <li><a href="demo.nhp">Demos</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </echo>
+            </ul>
+        </nav>
+    </header>
+</div>

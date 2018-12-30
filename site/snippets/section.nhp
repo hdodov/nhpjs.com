@@ -1,0 +1,9 @@
+var axios = require('axios');
+
+<h3>${ arguments.data }</h3>
+
+await axios.get("http://baconipsum.com/api/?type=meat-and-filler").then((res) => {
+    res.data.forEach((para) => {
+        <p>${ para }</p>
+    });
+});

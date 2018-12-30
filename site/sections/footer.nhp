@@ -1,0 +1,7 @@
+<footer>
+    <div class="wrap">
+        <echo>
+            Built with 🧠 by <a href="https://dodov.me/" target="_blank">Dodov</a>.
+        </echo>
+    </div>
+</footer>

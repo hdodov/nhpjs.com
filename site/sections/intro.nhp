@@ -1,0 +1,33 @@
+var code = capture(() => {
+    <echo trim>
+<span class="em1">if</span> (<span class="em2">check</span>()) {
+    &lt;<span class="em1">h1</span>&gt;This is NHP!&lt;/<span class="em1">h1</span>&gt;
+}
+    </echo>
+});
+
+<section class="intro">
+    <div class="wrap">
+        <h1 class="intro-title">What is NHP?</h1>
+    </div>
+
+    <div class="code-full">
+        <div class="wrap">
+            <pre><code>${ code }</code></pre>
+
+            <echo plain>
+                <p class="intro-description">
+                    <strong>N</strong>ode
+                    <strong>H</strong>ypertext
+                    <strong>P</strong>reprocessor
+                    is a templating engine built on
+                    <a href="https://nodejs.org/" target="_blank">Node.js</a>
+                    that employs the modular paradigm.
+                    It has no control-flow tags and among basic features, it has asynchronous rendering and allows you to
+                    utilize <strong>the entirety of the <a href="https://www.npmjs.com/" target="_blank">npm</a> registry</strong>
+                    to render your markup!
+                </p>
+            </echo>
+        </div>
+    </div>  
+</section>

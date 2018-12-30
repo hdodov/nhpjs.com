@@ -1,7 +1,9 @@
+var content = require('@/modules/content');
+
 <footer>
     <div class="wrap">
         <echo>
-            Built with 🧠 by <a href="https://dodov.me/" target="_blank">Dodov</a>.
+            Built with 🧠 by <a href="${ content.links.author }" target="_blank">Dodov</a>.
         </echo>
     </div>
 </footer>

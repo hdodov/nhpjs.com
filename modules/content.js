@@ -20,3 +20,9 @@ exports.features = [
         text: `Templates can include other templates and can require both local modules and external modules from NPM. This gives you limitless flexibility!`
     }
 ];
+
+exports.links = {
+    repo: 'https://github.com/hdodov/nhp',
+    siteRepo: 'https://github.com/hdodov/nhpjs.com',
+    author: 'https://dodov.me/'
+};

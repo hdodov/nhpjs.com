@@ -1,0 +1,17 @@
+var icon = require('@/modules/icon');
+var content = require('@/modules/content');
+
+<section class="section-wrap section-bg section-cta">
+    <div class="wrap sm">
+        <echo>
+            <h2>Get started?</h2>
+            <p>This is experimental technology and although it's not yet recommended for usage in production, this very website was built with it and it was a blast! You could check the source code <a href="${ content.links.siteRepo }" target="_blank">here</a>.</p>
+
+            <h3>If you're feeling hyped, go to GitHub and you'll be writing NHP templates in no time!</h3>
+
+            <a href="${ content.links.repo }">
+                <button>GitHub ${ icon('faArrowRight') }</button>
+            </a>
+        </echo>
+    </div>
+</section>

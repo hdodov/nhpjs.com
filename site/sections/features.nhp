@@ -1,0 +1,30 @@
+var icon = require('@/modules/icon');
+var content = require('@/modules/content');
+
+<section id="features" class="section-wrap">
+    <div class="wrap">
+        <h2>Features</h2>
+
+        <div class="features">
+            content.features.forEach((feature) => {
+                <div>
+                    echo(icon(feature.icon));
+
+                    <div class="content">
+                        <h3>${ feature.title }</h3>
+                        <p>${ feature.text }</p>
+                    </div>
+                </div>
+            });
+        </div>
+
+        <p class="info">\
+            By the way, these icons are inline SVGs imported from the
+            <a href="https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core" target="_blank">fontawesome-svg-core</a> module.
+            Putting them on this page was as simple as
+            <code>echo(icon('faCode'))</code>
+        </p>
+
+        <h3 class="cta">Check out <a href="demo.nhp">the demos</a>!</h3>
+    </div>
+</section>

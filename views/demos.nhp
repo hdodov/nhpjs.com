@@ -4,6 +4,7 @@ var tl = require('@/modules/textlink');
 <html>
 
 await include('./snippets/head.nhp', {
+    subtitle: 'Demos',
     markup: capture(() => {
         <link rel="stylesheet" href="node_modules/highlight.js/styles/monokai-sublime.css">
     })

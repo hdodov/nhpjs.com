@@ -15,6 +15,7 @@
     "express": "^4.16.4",
     "highlight.js": "^9.13.1",
     "ms": "^2.1.1",
+    "nhp": "github:hdodov/nhp#master",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

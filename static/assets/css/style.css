@@ -384,6 +384,11 @@ hr {
   padding-bottom: 0.1px;
   background: #fafafa; }
 
+.error {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  text-align: center; }
+
 .header-full {
   background: #333; }
 

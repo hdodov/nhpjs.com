@@ -21,6 +21,6 @@ var content = require('@/modules/content');
 
         <small class="info" style="max-width: 40em;">By the way, the icons above are inline SVGs imported from the ${ tl('fontawesome-svg-core') } module. Putting them on this page was as simple as <code>echo(icon('faCode'))</code></small>
 
-        <h3 class="cta">Check out <a href="/demos.nhp">the demos</a>!</h3>
+        <h3 class="cta">Check out <a href="/demos">the demos</a>!</h3>
     </div>
 </section>

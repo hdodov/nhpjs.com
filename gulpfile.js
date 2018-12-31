@@ -3,9 +3,9 @@ var sass = require('gulp-sass');
 
 const PATHS = {
     styles: {
-        watch: './site/assets/scss/**/*',
-        src: './site/assets/scss/*.scss',
-        dest: './site/assets/css/'
+        watch: './static/assets/scss/**/*',
+        src: './static/assets/scss/*.scss',
+        dest: './static/assets/css/'
     }
 };
 

@@ -1,3 +1,4 @@
+var tl = require('@/modules/textlink');
 var icon = require('@/modules/icon');
 var content = require('@/modules/content');
 
@@ -18,13 +19,8 @@ var content = require('@/modules/content');
             });
         </div>
 
-        <p class="info" style="max-width: 40em;">\
-            By the way, the icons above are inline SVGs imported from the
-            <a href="https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core" target="_blank">fontawesome-svg-core</a> module.
-            Putting them on this page was as simple as
-            <code>echo(icon('faCode'))</code>
-        </p>
+        <small class="info" style="max-width: 40em;">By the way, the icons above are inline SVGs imported from the ${ tl('fontawesome-svg-core') } module. Putting them on this page was as simple as <code>echo(icon('faCode'))</code></small>
 
-        <h3 class="cta">Check out <a href="demo.nhp">the demos</a>!</h3>
+        <h3 class="cta">Check out <a href="/demos.nhp">the demos</a>!</h3>
     </div>
 </section>

@@ -1,0 +1,25 @@
+var fs = require('fs');
+var path = require('path');
+var escape = require('escape-html');
+var icon = require('@/modules/icon');
+
+var file = path.join(__dirname, '../../demos', arguments.file);
+var demoContent = await new Promise((resolve, reject) => {
+    fs.readFile(file, 'utf8', (err, data) => {
+        if (err) {
+            reject(err);
+        } else {
+            resolve(data);
+        }
+    });
+});
+
+var demo = await include(file, null, false);
+
+<div class="demo">
+    <div class="scripts">
+        <pre><code class="html">${ escape(demoContent) }</code></pre>
+        <div class="separator">${ icon('faArrowRight') }</div>
+        <pre class="${ arguments.outputPreWrap ? 'pw' : '' }"><code class="html">${ escape(demo.buffer) }</code></pre>
+    </div>
+</div>

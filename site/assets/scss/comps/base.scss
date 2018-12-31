@@ -1,14 +1,16 @@
 .wrap {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0 20px;
 
     &.sm {
-        max-width: 600px;
+        max-width: 640px;
     }
+}
 
-    @include media-smaller('sm') {
-        padding: 0 20px;
-    }
+.icon {
+    width: 1em;
+    height: 1em;
 }
 
 .section-wrap {

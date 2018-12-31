@@ -1,0 +1,14 @@
+var axios = require('axios');
+var endpoint = 'https://baconipsum.com/api/?type=all-meat&paras=1';
+
+await axios({
+  method: 'get',
+  url: endpoint,
+  timeout: 2000
+}).then((res) => {
+  res.data.forEach((para) => {
+    <p>${ para }</p>
+  });
+}).catch((err) => {
+  <p>Could not load bacon. 🐷</p>
+});

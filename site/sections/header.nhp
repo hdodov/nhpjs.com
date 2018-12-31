@@ -10,7 +10,7 @@ var content = require('@/modules/content');
             <ul>
                 <echo strip>
                     <li><a href="/index.nhp">Home</a></li>
-                    <li><a href="/demo.nhp">Demos</a></li>
+                    <li><a href="/demos.nhp">Demos</a></li>
                     <li><a href="${ content.links.repo }" target="_blank">GitHub</a></li>
                 </echo>
             </ul>

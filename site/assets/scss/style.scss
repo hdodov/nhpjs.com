@@ -9,32 +9,4 @@
 @import './sections/cta';
 @import './sections/features';
 @import './sections/footer';
-
-.demo-scripts {
-    max-width: 1140px;
-    display: flex;
-}
-
-.demo {
-    margin: 120px 0;
-
-    h2 {
-        text-align: center;
-    }
-}
-
-// pre {
-//     display: flex;
-//     width: 50%;
-//     margin: 0;
-//     padding: 10px;
-//     box-sizing: border-box;
-//     text-align: left;
-// }
-
-code.hljs {
-    width: 100%;
-    padding: 10px 16px;
-    font-size: 16px;
-    border-radius: 3px;
-}
+@import './sections/demo';

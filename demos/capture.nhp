@@ -1,0 +1,11 @@
+var content = capture(() => {
+  <div>
+    <p>Hello!</p>
+  </div>
+});
+
+<div>
+  echo(content.toUpperCase());
+</div>
+
+exports.markup = content;

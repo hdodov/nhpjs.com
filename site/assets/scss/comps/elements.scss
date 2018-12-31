@@ -52,11 +52,32 @@ button {
 
     .icon {
         display: inline-block;
-        width: 1em;
-        height: 1em;
         margin-left: 10px;
 
         vertical-align: bottom;
         fill: $color-white;
     }
+}
+
+small {
+    font-size: 14px;
+}
+
+code {
+    &.hljs {
+        width: 100%;
+        padding: 10px 16px;
+
+        font-size: 12px;
+        border-radius: 2px;
+
+        @include media-larger('xs') {
+            font-size: 16px;
+        }
+    }
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $color-separator-1;
 }

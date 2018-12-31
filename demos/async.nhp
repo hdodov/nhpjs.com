@@ -1,0 +1,16 @@
+var promises = [];
+
+for (var i = 0; i != 5; i++) {
+  let wait = Math.random() * 250;
+
+  promises.push(new Promise((resolve, reject) => {
+    setTimeout(() => {
+      <h1>Waited ${ wait }ms!</h1>
+      resolve();
+    }, wait);
+  }));
+}
+
+<p>About to wait for stuff...</p>
+await Promise.all(promises);
+<p>Stuff happened, continue.</p>

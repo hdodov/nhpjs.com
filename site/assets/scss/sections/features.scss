@@ -5,8 +5,7 @@
         }
 
             .icon {
-                width: 28px;
-                height: 28px;
+                font-size: 1.75em;
                 position: absolute;
                     top: 3px;
                     left: 0;
@@ -50,9 +49,9 @@
     }
 
     .info {
+        display: block;
         margin: 60px auto;
 
-        font-size: 14px;
         text-align: center;
         color: $color-text-light;
 

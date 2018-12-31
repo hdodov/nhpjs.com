@@ -1,3 +1,9 @@
+// data.json
+// ---------
+// {
+//   "text": "This is JSON!"
+// }
+
 var ms = require('ms');
 var data = require('./modules/data.json');
 

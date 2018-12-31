@@ -1,0 +1,18 @@
+<echo plain>
+  with the "plain" option, you can echo stuff like:
+  ` ' " \ \n \r ${ not a template literal }
+</echo>
+
+<echo escape>
+  "escape" simply escapes
+  <strong>all tags</strong>
+  and other "HTML entities"
+</echo>
+
+<echo strip>
+  <span>
+    <p>
+      "strip" removes whitespace between tags
+    </p>
+  </span>
+</echo>

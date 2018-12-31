@@ -344,20 +344,36 @@ button {
     background: #3616ae; }
   button .icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
     margin-left: 10px;
     vertical-align: bottom;
     fill: #ffffff; }
 
+small {
+  font-size: 14px; }
+
+code.hljs {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 12px;
+  border-radius: 2px; }
+  @media (min-width: 768px) {
+    code.hljs {
+      font-size: 16px; } }
+
+hr {
+  border: none;
+  border-top: 1px solid #eeeeee; }
+
 .wrap {
-  max-width: 960px;
-  margin: 0 auto; }
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px; }
   .wrap.sm {
-    max-width: 600px; }
-  @media (max-width: 767px) {
-    .wrap {
-      padding: 0 20px; } }
+    max-width: 640px; }
+
+.icon {
+  width: 1em;
+  height: 1em; }
 
 .section-wrap .wrap {
   margin-top: 120px;
@@ -466,8 +482,7 @@ header {
   position: relative; }
 
 #features .items .icon {
-  width: 28px;
-  height: 28px;
+  font-size: 1.75em;
   position: absolute;
   top: 3px;
   left: 0;
@@ -500,8 +515,8 @@ header {
     margin: 40px 0; } }
 
 #features .info {
+  display: block;
   margin: 60px auto;
-  font-size: 14px;
   text-align: center;
   color: #888888; }
   #features .info code {
@@ -526,17 +541,45 @@ footer {
     height: 1em;
     fill: #ffffff; }
 
-.demo-scripts {
-  max-width: 1140px;
-  display: flex; }
+#demos {
+  margin-top: 120px;
+  margin-bottom: 120px; }
+  #demos p {
+    max-width: 30em;
+    margin: 0 auto 60px; }
+  #demos hr {
+    margin-top: 100px; }
+  #demos small {
+    display: block;
+    max-width: 35em;
+    margin: 40px auto; }
+  @media (min-width: 768px) {
+    #demos p, #demos small {
+      text-align: center; } }
 
 .demo {
-  margin: 120px 0; }
-  .demo h2 {
-    text-align: center; }
-
-code.hljs {
-  width: 100%;
-  padding: 10px 16px;
-  font-size: 16px;
-  border-radius: 3px; }
+  margin: 24px 0; }
+  .demo .scripts pre {
+    flex: 1 0 0;
+    display: flex;
+    margin: 0;
+    line-height: 1.3;
+    overflow: auto; }
+    .demo .scripts pre ::-webkit-scrollbar {
+      display: none; }
+    .demo .scripts pre.pw {
+      white-space: pre-wrap; }
+    .demo .scripts pre code {
+      box-sizing: border-box; }
+  .demo .scripts .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    font-size: 14px; }
+  @media (min-width: 768px) {
+    .demo .scripts {
+      display: flex; } }
+  @media (max-width: 767px) {
+    .demo .scripts .separator .icon {
+      transform: rotate(90deg); } }

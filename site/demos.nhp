@@ -1,0 +1,62 @@
+var tl = require('@/modules/textlink');
+
+<!DOCTYPE html>
+<html>
+
+await include('./snippets/head.nhp', {
+    markup: capture(() => {
+        <link rel="stylesheet" href="node_modules/highlight.js/styles/monokai-sublime.css">
+    })
+});
+
+<body>
+    await include('./sections/header.nhp');
+
+    var demos = await Promise.all([
+        include('./snippets/demo.nhp', { file: 'expressions.nhp' }, false),
+        include('./snippets/demo.nhp', { file: 'include.nhp' }, false),
+        include('./snippets/demo.nhp', { file: 'modules.nhp' }, false),
+        include('./snippets/demo.nhp', { file: 'capture.nhp' }, false),
+        include('./snippets/demo.nhp', { file: 'echo.nhp' }, false),
+        include('./snippets/demo.nhp', { file: 'async.nhp' }, false),
+        include('./snippets/demo.nhp', { file: 'api.nhp', outputPreWrap: true }, false)
+    ]);
+    
+    <div id="demos" class="wrap">
+        <h2>Basic functionality</h2>
+
+        echo(demos[0].buffer);
+        <p>Templates are compiled down to valid JavaScript. Markup is usually echoed as a ${ tl('template literal') } which allows you to output expressions while in the markup context.</p>
+
+        echo(demos[1].buffer);
+        <p>You can pass arguments to included templates. Those templates, on the other hand, can export data&mdash;just like a ${ tl('Node module') }!</p>
+
+        echo(demos[2].buffer);
+        <p>The Node.js <code>${ tl('require()') }</code> function works the same way in templates as it does in modules. In this case, it loads the ${ tl('ms') } utility and a local file.</p>
+
+        echo(demos[3].buffer);
+        <p>You can capture markup in a variable by using the special <code>capture()</code> function. Then, you can export that markup for usage elsewhere.</p>
+
+        echo(demos[4].buffer);
+        <p>To export larger chunks of markup, you can use the special <code>&lt;echo&gt;</code> tags that are used solely by the compiler. You can also specify options that alter the output.</p>
+
+        <h2>Asynchronicity ✨</h2>
+
+        echo(demos[5].buffer);
+        <p>Templates are compiled down to an ${ tl('async function') }. This means you can use <code>${ tl('await') }</code> to resolve the template only after a certain asynchronous action (a ${ tl('Promise') }) is resolved first.</p>
+
+        echo(demos[6].buffer);
+        <p>You can easily fetch data from an external source. In this case, we use the ${ tl('axios') } module to quickly load some ${ tl('bacon ipsum') }.</p>
+
+        <hr>
+
+        <small><strong>Note:</strong> These demos are run when you load the page and the output you've seen above is the actual output they've produced. ${ tl('See for yourself', 'demos') }.</small>
+    </div>
+
+    await include('./sections/footer.nhp');
+
+    <script src="/assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

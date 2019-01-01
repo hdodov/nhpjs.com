@@ -9,10 +9,8 @@ app.use('/node_modules', express.static('node_modules'));
 app.use(express.static('static'));
 
 app.get('*', function (req, res, next) {
-    console.log(req.protocol, req.headers, req.url);
-
     if (prod && req.headers['x-forwarded-proto'] == 'http')  {
-        return res.redirect('https://' + req.headers.host + req.url);
+        return res.redirect(301, 'https://' + req.headers.host + req.url);
     }
 
     return next();

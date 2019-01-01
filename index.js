@@ -11,10 +11,10 @@ app.use(express.static('static'));
 app.get('*', function (req, res, next) {
     if (prod && req.protocol === 'http')  {
         console.log(req.protocol, req.headers.host, req.url);
-        res.redirect('https://' + req.headers.host + req.url);
+        return res.redirect('https://' + req.headers.host + req.url);
     }
-    
-    next();
+
+    return next();
 });
 
 app.get('/', function (req, res) {

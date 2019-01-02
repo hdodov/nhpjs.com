@@ -44,14 +44,14 @@ await include('./snippets/head.nhp', {
         <h2>Asynchronicity ✨</h2>
 
         echo(demos[5].buffer);
-        <p>Templates are compiled down to an ${ tl('async function') }. This means you can use <code>${ tl('await') }</code> to resolve the template only after a certain asynchronous action (a ${ tl('Promise') }) is resolved first.</p>
+        <p>Templates are compiled down to an ${ tl('async function') }. This means you can use <code>${ tl('await') }</code> to resolve the template only after a certain asynchronous action (a ${ tl('Promise') }) has resolved first.</p>
 
         echo(demos[6].buffer);
         <p>You can easily fetch data from an external source. In this case, we use the ${ tl('axios') } module to quickly load some ${ tl('bacon ipsum') }.</p>
 
         <hr>
 
-        <small><strong>Note:</strong> These demos are run when you load the page and the output you've seen above is the actual output they've produced. ${ tl('See for yourself', 'demos') }.</small>
+        <small><strong>Note:</strong> These demos are run when you load the page and the output you've seen above is the actual output they've produced. ${ tl('See for yourself', 'demos template') }.</small>
     </div>
 
     await include('./sections/footer.nhp');

@@ -1,3 +1,4 @@
+var tl = require('@/modules/textlink');
 var code = capture(() => {
     <echo trim>
 <span class="em1">if</span> (<span class="em2">check</span>()) {
@@ -14,20 +15,7 @@ var code = capture(() => {
     <div class="code-full">
         <div class="wrap">
             <pre><code>${ code }</code></pre>
-
-            <echo plain>
-                <p class="intro-description">
-                    <strong>N</strong>ode
-                    <strong>H</strong>ypertext
-                    <strong>P</strong>reprocessor
-                    is a templating engine built on
-                    <a href="https://nodejs.org/" target="_blank">Node.js</a>
-                    that employs the modular paradigm.
-                    It has no control-flow tags and among basic features, it has asynchronous rendering and allows you to
-                    utilize <strong>the entirety of the <a href="https://www.npmjs.com/" target="_blank">npm</a> registry</strong>
-                    to render your markup!
-                </p>
-            </echo>
+            <p class="intro-description">Node Hypertext Preprocessor is a templating engine built on ${ tl('Node.js') } that employs the modular paradigm. It has no control-flow tags and among basic features, it has asynchronous rendering and allows you to utilize <strong>the entirety of the ${ tl('npm') } registry</strong> to render your markup!</p>
         </div>
     </div>  
 </section>

@@ -1,3 +1,5 @@
+var tl = require('./textlink');
+
 exports.features = [
     {
         title: 'Simplicity',
@@ -17,7 +19,7 @@ exports.features = [
     {
         title: 'Composability',
         icon: 'faPuzzlePiece',
-        text: `Templates can include other templates and can require both local modules and external modules from NPM. This gives you limitless flexibility!`
+        text: `Templates can include other templates and can require both local modules and external modules from ${ tl('npm') }. This gives you limitless flexibility!`
     }
 ];
 

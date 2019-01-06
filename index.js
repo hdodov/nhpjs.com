@@ -1,9 +1,11 @@
-var nhp = require('nhp');
+var nhp = require('nhpjs');
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8080;
 
+app.engine('nhp', nhp.__express);
 app.set('view engine', 'nhp');
+
 app.use('/node_modules', express.static('node_modules'));
 app.use(express.static('static'));
 

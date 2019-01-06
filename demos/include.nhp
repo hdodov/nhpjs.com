@@ -1,7 +1,9 @@
 // child.nhp
 // ---------
-// <p>${ arguments.name.toUpperCase() }</p>
+// <p>${ input.name.toUpperCase() }</p>
 // exports.value = 42;
+
+var a = 5;
 
 var child = await include('./modules/child.nhp', {
   name: 'John'

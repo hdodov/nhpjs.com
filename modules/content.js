@@ -26,5 +26,7 @@ exports.features = [
 exports.links = {
     repo: 'https://github.com/hdodov/nhp',
     siteRepo: 'https://github.com/hdodov/nhpjs.com',
-    author: 'https://dodov.me/'
+    author: 'https://dodov.me/',
+    syntaxRepo: 'https://github.com/hdodov/nhp-syntax-highlight',
+    syntaxPage: 'https://github.com/hdodov/nhp/wiki/Syntax'
 };

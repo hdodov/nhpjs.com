@@ -11,7 +11,9 @@ var links = {
     'Promise': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
     'axios': 'https://github.com/axios/axios',
     'bacon ipsum': 'https://baconipsum.com/json-api/',
-    'demos template': 'https://github.com/hdodov/nhpjs.com/blob/master/views/demos.nhp'
+    'demos template': 'https://github.com/hdodov/nhpjs.com/blob/master/views/demos.nhp',
+    'Sublime': 'https://www.sublimetext.com/',
+    'ES8': 'https://www.ecma-international.org/ecma-262/8.0/'
 };
 
 module.exports = function (text, key) {

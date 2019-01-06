@@ -1,2 +1,2 @@
-<p>${ arguments.name.toUpperCase() }</p>
+<p>${ input.name.toUpperCase() }</p>
 exports.value = 42;

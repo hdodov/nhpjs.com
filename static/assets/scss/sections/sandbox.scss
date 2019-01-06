@@ -1,0 +1,56 @@
+#sandbox {
+    margin-top: 120px;
+    margin-bottom: 240px;
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        max-width: 40em;
+        margin: 0 auto;
+
+        li {
+            margin: 10px 0;
+        }
+    }
+
+    .sandbox-wrapper {
+        margin: 40px 0;
+
+        #editor {
+            font-size: 16px;
+        }
+
+        pre {
+            display: flex;
+        }
+    }
+
+    @media (min-width: 1300px) {
+        .sandbox-wrapper {
+            margin-left: -140px;
+            margin-right: -140px;
+        }
+    }
+
+    @include media-larger('xs') {
+        .sandbox-wrapper {
+            display: flex;
+
+            #editor {
+                width: 60%;
+            }
+
+            pre {
+                width: 40%;
+                margin: 0 0 0 20px;
+                line-height: 19px;
+            }
+        }
+    }
+}

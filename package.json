@@ -1,5 +1,5 @@
 {
-  "name": "tpr",
+  "name": "npmjs-com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,11 +11,13 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
+    "ace-builds": "^1.4.2",
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "highlight.js": "^9.13.1",
+    "lodash.debounce": "^4.0.8",
     "ms": "^2.1.1",
-    "nhp": "github:hdodov/nhp#0.1.0",
+    "nhpjs": "^0.2.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

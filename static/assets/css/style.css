@@ -417,6 +417,9 @@ header {
     color: #ffffff; }
     header nav a:hover {
       color: #eeeeee; }
+  @media (max-width: 767px) {
+    header .link-home {
+      display: none; } }
 
 #intro {
   margin: 180px 0; }
@@ -588,3 +591,35 @@ footer {
   @media (max-width: 767px) {
     .demo .scripts .separator .icon {
       transform: rotate(90deg); } }
+
+#sandbox {
+  margin-top: 120px;
+  margin-bottom: 240px; }
+  #sandbox h2 {
+    font-size: 28px; }
+  #sandbox h3 {
+    text-align: center; }
+  #sandbox ul {
+    max-width: 40em;
+    margin: 0 auto; }
+    #sandbox ul li {
+      margin: 10px 0; }
+  #sandbox .sandbox-wrapper {
+    margin: 40px 0; }
+    #sandbox .sandbox-wrapper #editor {
+      font-size: 16px; }
+    #sandbox .sandbox-wrapper pre {
+      display: flex; }
+  @media (min-width: 1300px) {
+    #sandbox .sandbox-wrapper {
+      margin-left: -140px;
+      margin-right: -140px; } }
+  @media (min-width: 768px) {
+    #sandbox .sandbox-wrapper {
+      display: flex; }
+      #sandbox .sandbox-wrapper #editor {
+        width: 60%; }
+      #sandbox .sandbox-wrapper pre {
+        width: 40%;
+        margin: 0 0 0 20px;
+        line-height: 19px; } }

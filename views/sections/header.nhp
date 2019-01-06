@@ -9,8 +9,9 @@ var content = require('@/modules/content');
         <nav>
             <ul>
                 <echo strip>
-                    <li><a href="/">Home</a></li>
+                    <li class="link-home"><a href="/">Home</a></li>
                     <li><a href="/demos">Demos</a></li>
+                    <li><a href="/sandbox">Sandbox</a></li>
                     <li><a href="${ content.links.repo }" target="_blank">GitHub</a></li>
                 </echo>
             </ul>

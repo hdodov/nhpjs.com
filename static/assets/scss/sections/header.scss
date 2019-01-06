@@ -45,4 +45,10 @@ header {
                     }
                 }
     } // .nav
+
+    @include media-smaller('sm') {
+        .link-home {
+            display: none;
+        }
+    }
 }

@@ -1,0 +1,77 @@
+var tl = require('@/modules/textlink');
+var content = require('@/modules/content');
+
+<!DOCTYPE html>
+<html>
+
+await include('./snippets/head', {
+    subtitle: 'Sandbox',
+    markup: capture(() => {
+        <link rel="stylesheet" href="node_modules/highlight.js/styles/github.css">
+    })
+});
+
+var demoCode = capture(() => {
+<echo escape><div class="foo">
+    var num = 4;
+
+    if (num <= 5) {
+        <ul>
+        for (var i = 1; i <= num; i++) {
+            <li>Number \${ i }</li>
+        }
+        </ul>
+    } else {
+        <\echo>
+            Sorry!
+            The number <strong>\${ num }</strong>
+            is too high to count up to.
+        <\/echo>
+    }
+</div>
+
+var markup = capture(() => {
+    <p>Hello!</p>
+});
+
+<div>
+    echo(markup.toUpperCase());
+</div></echo>
+});
+
+<body>
+    await include('./sections/header');
+
+    <div id="sandbox" class="wrap">
+        <h3>Notes</h3>
+        <ul>
+            <li>\
+                To use the sandbox, you must be running a newer browser that supports ${ tl('ES8') } features.
+            </li>
+            <li>\
+                This sandbox uses HTML highlighting, which is not ideal. If you write NHP on your machine and ${ tl('Sublime') }
+                is your text editor, you can use the <a href="${ content.links.syntaxRepo }" target="_blank">syntax highlighting plugin</a>.
+            </li>
+            <li>\
+                NHP was made for server-side usage with ${ tl('Node.js') } and many of its key
+                features, like requires and includes, can't be tested in the browser.
+            </li>
+        </ul>
+
+        <div class="sandbox-wrapper">
+            <div id="editor">${ demoCode }</div>
+            <pre><code id="output" class="html"></code></pre>
+        </div>
+
+        <h2 class="info">\
+            Learn the NHP syntax <a href="${ content.links.syntaxPage }" target="_blank">here</a>!
+        </h2>
+    </div>
+
+    await include('./sections/footer');
+
+    <script src="/node_modules/ace-builds/src-noconflict/ace.js"></script>
+    <script src="/assets/build/highlight.pack.js"></script>
+    <script src="/assets/build/sandbox.js"></script>
+</body>
+</html>

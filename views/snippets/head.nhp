@@ -1,6 +1,6 @@
 <head>
-    var title = arguments.title || 'NHP',
-        subtitle = arguments.subtitle || 'Node Hypertext Preprocessor';
+    var title = input.title || 'NHP',
+        subtitle = input.subtitle || 'Node Hypertext Preprocessor';
 
     <title>${ subtitle } &middot; ${ title }</title>
 
@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    if (arguments.markup) {
-        echo(arguments.markup);
+    if (input.markup) {
+        echo(input.markup);
     }
 </head>

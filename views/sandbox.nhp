@@ -58,7 +58,7 @@ var markup = capture(() => {
             </li>
         </ul>
 
-        <div class="sandbox-wrapper">
+        <div id="editor-container" class="sandbox-wrapper is-hidden">
             <div id="editor">${ demoCode }</div>
             <pre><code id="output" class="html"></code></pre>
         </div>

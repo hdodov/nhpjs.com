@@ -610,6 +610,10 @@ footer {
       font-size: 16px; }
     #sandbox .sandbox-wrapper pre {
       display: flex; }
+    #sandbox .sandbox-wrapper.is-hidden {
+      min-height: 50vh;
+      opacity: 0;
+      visibility: hidden; }
   @media (min-width: 1300px) {
     #sandbox .sandbox-wrapper {
       margin-left: -140px;

@@ -4,7 +4,7 @@ exports.features = [
     {
         title: 'Simplicity',
         icon: 'faCode',
-        text: `Instead of using control-flow tags that quickly become annoying to deal with, NHP uses a simple whitespace-based approach to separate JavaScript from markup.`
+        text: `Instead of using control-flow tags that can become annoying to deal with, NHP uses a simple whitespace-based approach to separate JavaScript from markup. <a href="/sandbox" target="_blank">Sandbox</a>.`
     },
     {
         title: 'Modularity',

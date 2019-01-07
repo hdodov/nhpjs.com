@@ -12,4 +12,18 @@
     if (input.markup) {
         echo(input.markup);
     }
+
+    <echo>
+        <meta name="google-site-verification" content="l_n_qa2a9b6tLGt-zNQV3m9GQPJJ8YXcnGp26aDiHHM" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96318471-8"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-96318471-8');
+        </script>
+    </echo>
 </head>

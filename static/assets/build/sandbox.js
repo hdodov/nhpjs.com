@@ -789,6 +789,7 @@ var escape = require('escape-html');
 var debounce = require('lodash.debounce');
 var Renderer = require('./renderer');
 
+var container = document.getElementById('editor-container');
 var output = document.getElementById('output');
 var editor = ace.edit("editor");
 editor.setTheme("ace/theme/monokai");
@@ -828,5 +829,6 @@ editor.on('change', function () {
 });
 
 display(renderCode(editor.getValue()));
+container.classList.remove('is-hidden');
 
 },{"./renderer":6,"escape-html":1,"lodash.debounce":2}]},{},[7]);

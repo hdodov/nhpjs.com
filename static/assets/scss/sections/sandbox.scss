@@ -29,6 +29,12 @@
         pre {
             display: flex;
         }
+
+        &.is-hidden {
+            min-height: 50vh;
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     @media (min-width: 1300px) {

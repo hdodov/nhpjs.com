@@ -3,15 +3,17 @@ var content = require('@/modules/content');
 
 <section id="cta" class="section-wrap section-bg">
     <div class="wrap sm">
-        <echo>
-            <h2>Get started?</h2>
-            <p>This is experimental technology and although it's not yet recommended for usage in production, this very website was built with it and it was a blast! You could check the source code <a href="${ content.links.siteRepo }" target="_blank">here</a>.</p>
+        <h2>Get started?</h2>
+        <p>\
+            This is experimental technology and although it's not yet recommended for usage in production,
+            this very website was built with it and it was a blast! You could check the source code
+            <a href="${ content.links.siteRepo }" target="_blank">here</a>.
+        </p>
 
-            <h3>If you're feeling hyped, go to GitHub and you'll be writing NHP templates in no time!</h3>
+        <h3>If you're feeling hyped, check the <a href="/sandbox">sandbox</a> or go to GitHub where you can learn more!</h3>
 
-            <a href="${ content.links.repo }">
-                <button>GitHub ${ icon('faArrowRight') }</button>
-            </a>
-        </echo>
+        <a href="${ content.links.repo }">
+            <button>GitHub ${ icon('faArrowRight') }</button>
+        </a>
     </div>
 </section>

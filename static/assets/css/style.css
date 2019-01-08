@@ -439,6 +439,9 @@ header {
         color: #247ede; }
       #intro .code-full code span:hover {
         font-weight: bold; }
+    @media (max-width: 1199px) {
+      #intro .code-full br {
+        display: none; } }
     @media (min-width: 768px) {
       #intro .code-full .wrap {
         display: flex;

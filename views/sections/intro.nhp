@@ -15,7 +15,13 @@ var code = capture(() => {
     <div class="code-full">
         <div class="wrap">
             <pre><code>${ code }</code></pre>
-            <p class="intro-description">Node Hypertext Preprocessor is a templating engine built on ${ tl('Node.js') } that employs the modular paradigm. It has no control-flow tags and among basic features, it has asynchronous rendering and allows you to utilize <strong>the entirety of the ${ tl('npm') } registry</strong> to render your markup!</p>
+
+            <p class="intro-description">\
+                Node Hypertext Preprocessor is a<br> template engine built on ${ tl('Node.js') } that
+                employs the modular paradigm. It has no control-flow tags and among basic features,
+                it has asynchronous rendering and allows you to utilize <strong>the entirety of the
+                ${ tl('npm') } registry</strong> to render your markup!
+            </p>
         </div>
     </div>  
 </section>

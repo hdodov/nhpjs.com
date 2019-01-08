@@ -17,7 +17,7 @@
     "highlight.js": "^9.13.1",
     "lodash.debounce": "^4.0.8",
     "ms": "^2.1.1",
-    "nhpjs": "^0.2.0",
+    "nhpjs": "^0.2.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

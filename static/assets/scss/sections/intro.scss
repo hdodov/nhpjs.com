@@ -28,6 +28,12 @@
                 }
             }
 
+        @include media-smaller('lg') {
+            br {
+                display: none;
+            }
+        }
+
         @include media-larger('xs') {
             .wrap {
                 display: flex;

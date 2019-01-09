@@ -23,5 +23,5 @@ var code = capture(() => {
                 ${ tl('npm') } registry</strong> to render your markup!
             </p>
         </div>
-    </div>  
+    </div>
 </section>

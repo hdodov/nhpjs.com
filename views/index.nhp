@@ -7,6 +7,11 @@ await include('./snippets/head.nhp');
     await include('./sections/header.nhp');
     await include('./sections/intro.nhp');
     await include('./sections/features.nhp');
+
+    <div class="ph-banner">
+        <h2>NHP is on <a href="https://www.producthunt.com/posts/node-hypertext-preprocessor" target="_blank">Product Hunt</a> right now!</h2>
+    </div>  
+    
     await include('./sections/use-cta.nhp');
     await include('./sections/footer.nhp');
 </body>
